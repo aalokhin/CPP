@@ -1,8 +1,9 @@
 NAME = phonebook
 
-SRC = phonebook.cpp main.cpp
+SRC = main.cpp AwesomePhonebook.cpp
 
-OBJ = phonebook.o main.o
+OBJ = main.o AwesomePhonebook.o
+
 
 all: $(NAME)
 
@@ -10,7 +11,7 @@ $(NAME): $(OBJ)
 	@clang++ $(OBJ) -o $(NAME)
 
 $(OBJ):%.o:%.cpp
-	@clang++ -std=c++98 -Wall -Wextra -Werror -c $(SRC) -o $(OBJ)
+	@clang++ -std=c++98 -Wall -Wextra -Werror -c $(SRC)
 
 clean:
 	@rm -f $(OBJ)
