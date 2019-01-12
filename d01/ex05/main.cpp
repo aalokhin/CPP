@@ -20,4 +20,6 @@ int						main(void)
 
   std::cout << bob.identify() << std::endl;
   std::cout << bob.getBrain().identify() << std::endl;
+  std::cout << bob.getBrain()._belongs_to << std::endl\
+   << bob.getBrain()._size <<  std::endl << bob.getBrain()._age << std::endl;
 }

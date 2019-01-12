@@ -2,7 +2,9 @@
 
 #include <sstream>
 
-Brain::Brain(){};
+Brain::Brain(){
+	Brain::set_Attributes();
+};
 
 Brain::~Brain(){};
 
@@ -31,6 +33,18 @@ std::string Brain::identify() const
 
 	return(res_str);
 }
+
+void	Brain::set_Attributes()
+{
+	std::cout << "To whom does the brsain belog?" << std::endl;
+	std::cin >> _belongs_to;
+	std::cout << "How old is the owner?" << std::endl;
+	std::cin >> _age;
+	std::cout << "How big is the brain?" << std::endl;
+	std::cin >> _size;
+
+}
+
 
 // int main()
 // {
