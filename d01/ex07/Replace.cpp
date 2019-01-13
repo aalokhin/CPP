@@ -31,13 +31,14 @@ int main (int argc, char **argv)
 		return(1);
 	}
 	std::ifstream	input_file((std::string)argv[1]);
-	std::ofstream	output_file((std::string)argv[1] + (std::string)".replace");
 	
 	if(!input_file || !input_file.is_open() || input_file.eof())
 	{
 		show_error(2);
 		return(1);
 	}
+	std::ofstream	output_file((std::string)argv[1] + (std::string)".replace");
+
 	if (!output_file || !output_file.is_open() || output_file.eof())
 	{
 		show_error(4);
