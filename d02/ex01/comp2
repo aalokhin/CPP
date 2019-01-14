@@ -1,0 +1,36 @@
+Default constructor called
+Int constructor called
+this is val_to_convert << _fraction 2560
+setRawBits member function called
+Float constructor called
+this is val_to_convert << _fraction 10860
+setRawBits member function called
+Copy constructor called
+Assignation operator called
+getRawBits member function called
+Float constructor called
+this is val_to_convert << _fraction 316015
+setRawBits member function called
+Assignation operator called
+getRawBits member function called
+Destructor called
+a is getRawBits member function called
+1234.43
+b is getRawBits member function called
+10
+c is getRawBits member function called
+42.4219
+d is getRawBits member function called
+10
+a is getRawBits member function called
+1234 as integer
+b is getRawBits member function called
+10 as integer
+c is getRawBits member function called
+42 as integer
+d is getRawBits member function called
+10 as integer
+Destructor called
+Destructor called
+Destructor called
+Destructor called
