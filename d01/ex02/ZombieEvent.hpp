@@ -2,7 +2,6 @@
 #define ZOMBIEEVENT_HPP
 
 #include <iostream>
-#include <cstdlib>
 #include "Zombie.hpp"
 
 class ZombieEvent
@@ -15,6 +14,9 @@ class ZombieEvent
 		std::string RandomName();
 		std::string RandomType();
 		Zombie* randomChump();
+	private:
+		int	get_Rand_Int(unsigned int from );
+
 
 };
 

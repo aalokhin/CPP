@@ -11,14 +11,6 @@ extern const std::string ask_info;
 extern const std::string error_input;
 extern const std::string seach_str;
 
-
-/*
-first name, last name, nickname,
-login, postal address, email address, 
-phone number, birthday date, favorite meal,
-underwear color and darkest secret.
-*/
-
 class AwesomePhonebook {
   public:
   	AwesomePhonebook() {};
@@ -29,8 +21,6 @@ class AwesomePhonebook {
   	void	add();
   	void	show_info();
   	void 	print_one();
-
-  	//what else.....
 };
 
 #endif

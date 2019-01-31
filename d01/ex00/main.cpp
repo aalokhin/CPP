@@ -5,9 +5,7 @@
 void ponyOnTheHeap(void)
 {
 	const Pony*	lil_pony = new Pony("Shetland", "Carl", true);
-
 	delete lil_pony;
-
 }
 
 void ponyOnTheStack(void)
@@ -20,8 +18,7 @@ int		main( void )
 {
 	ponyOnTheHeap();
 	ponyOnTheStack();
-
-	system("leaks -q a.out");
+	system("leaks -q pony");
 	return 0;
 }
 

@@ -17,22 +17,11 @@ int 			main( void )
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
 	std::cout << Fixed::max( a, b ) << std::endl;
+
+	Fixed  k(9.01f);
+	Fixed  g(0);
+
+	std::cout << "zero" << k / g << std::endl;
+
 	return 0;
 }
-
-
-
-/*
-0
-0.00390625
-0.00390625
-0.00390625
-0.0078125
-10.1016
-10.1016
-*/
-
-
-// Fixed tmp(* this );
-// ++(* this );
-// return tmp;

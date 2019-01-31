@@ -5,20 +5,6 @@ const std::string ask_info("Enter ADD, SEARCH or EXIT command to create, use or 
 const std::string error_input("Error on input: wrong command. Enter ADD, SEARCH or EXIT command to create, use or exit your Phonebook");
 const std::string seach_str("Please enter the index of the relevant contact to see details");
 
-
-// AwesomePhonebook::AwesomePhonebook() {}
-// AwesomePhonebook::~AwesomePhonebook() {}
-
-void	add();
-//void	show();
-void 	print_one();
-
-/*
-
-  	std::string f_name, l_name, n_name, login, address, email, phone;
-  	std::string birthday, fav_meal, undercolor, darkest_secret;
-*/
-
 void AwesomePhonebook::add()
 {
 	std::cout << "Enter first name" << std::endl;

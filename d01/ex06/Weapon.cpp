@@ -15,6 +15,3 @@ void					Weapon::setType(std::string weapon_type)
 {
 	_type = weapon_type;
 }
-
-
-

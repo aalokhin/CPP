@@ -12,10 +12,7 @@ class Human
 		Human();
 		~Human();
 		const Brain _brain;
-
 		std::string identify();
-
-
 		const Brain &getBrain();
 };
 

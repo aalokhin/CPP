@@ -1,8 +1,8 @@
 NAME = raw_bits3
 
-SRC = main.cpp Fixed.class.cpp  op_overload.cpp
+SRC = main.cpp Fixed.class.cpp
 
-OBJ =  main.o Fixed.class.o op_overload.o
+OBJ =  main.o Fixed.class.o
 
 FLAGS = -Wall -Wextra -Werror
 

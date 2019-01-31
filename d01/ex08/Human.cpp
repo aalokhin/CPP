@@ -27,15 +27,7 @@ void Human::action(std::string const & action_name, std::string const & target)
 
 	i = 0;
 	size_t arr_len;
-	// arr_len = sizeof(arr_s)/sizeof(arr_s[0]);
-
-	// std::cout << arr_len << std::endl;
-
-	arr_len = 0;
-    while (!arr_s[arr_len].empty())
-        ++arr_len;
-
-//	std::cout << arr_len << std::endl;
+	arr_len = sizeof(arr_s)/sizeof(arr_s[0]);
 
 	while(i < arr_len)
 	{

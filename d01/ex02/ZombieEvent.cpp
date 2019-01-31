@@ -24,49 +24,44 @@ void			ZombieEvent::setZombieType(Zombie* new_zombie)
 Zombie* ZombieEvent::newZombie(std::string name)
 {
 	Zombie *new_zombie;
-	system("echo \" \033[1;94m\"");
 	new_zombie = new Zombie(name, "NaN");
 	setZombieType(new_zombie);
-	system("echo \"\033[0m\"");
 	return new_zombie;
 }
 
-std::string ZombieEvent::RandomName() //fix the rand non-literal characters
+std::string ZombieEvent::RandomName()
 {
-	srand(time(0));
-	
-	int max_len = 9;
-	int len = rand() % (max_len - 1);
+	int len = 6;
+	const std::string	alphabet("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz");
 	int i;
+
+	i = 0;
+
 	char r_name[len + 1];
 	r_name[len] = '\0';
-
-	
 	for(i = 0; i < len; i++)
 	{
-		r_name[i] =  (char)((rand() % 52) + 65);
+		r_name[i] =  alphabet[(get_Rand_Int(52))];
 	}
 	std::string rand_res(r_name);
 	return rand_res;
 }
 
+
+int					ZombieEvent::get_Rand_Int(unsigned int from)
+{
+
+	int	i = (rand() % from);
+
+	return ( (i >= 0) ? i : 0 );
+}
+
+
 std::string ZombieEvent::RandomType()
 {
-	srand(time(0));
-	
-	int max_len = 12;
-	int len = rand() % (max_len - 1);
-	int i;
-	char r_name[len + 1];
-	r_name[len] = '\0';
-
-	
-	for(i = 0; i < len; i++)
-	{
-		r_name[i] =  (char)((rand() % 52) + 65);
-	}
-	std::string rand_res(r_name);
-	return rand_res;
+	const std::string		zombie_types[9] = 
+	{"Stalker", "Spitter", "Ghoul", "Runner", "Romero", "Vodoo", "Lazy", "Crawlers", "Screamer"};
+	return zombie_types[get_Rand_Int(9)];
 }
 
 Zombie* ZombieEvent::randomChump()
@@ -75,12 +70,10 @@ Zombie* ZombieEvent::randomChump()
 
 	system("echo \"\033[1;32m\"");
 
-	//std::cout << "ZombieEvent Random Creation called" << std::endl;
+
 	std::string name_r(RandomName());
 	std::string type_r(RandomType());
-
 	rand_zombie = new Zombie(name_r, type_r);
-	//rand_zombie->announce();
 	system("echo \"\033[0m\"");
 	return rand_zombie;
 

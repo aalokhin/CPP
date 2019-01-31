@@ -14,11 +14,3 @@ const Brain &Human::getBrain()
   return (_brain);
 }
 
-// int main()
-// {
-// 	Human new_human;
-
-// 	new_human.identify();
-
-// 	return (0);
-// }

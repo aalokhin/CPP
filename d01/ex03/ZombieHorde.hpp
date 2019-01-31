@@ -15,11 +15,12 @@ class ZombieHorde
 		~ZombieHorde();
 		void			announce(void);
 
-	//private:
+	private:
 		int				_N;
 		Zombie			*_zombie_horde;
 		std::string		RandomName();
 		std::string 	RandomType();
+		int 			get_Rand_Int(unsigned int from);
 };
 
 #endif

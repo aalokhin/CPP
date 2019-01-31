@@ -1,4 +1,3 @@
-
 #include <iostream>
 
 char	make_capital(char c)
@@ -25,7 +24,7 @@ int main(int argc, char **argv)
 				std::cout << make_capital(argv[i][j]);
 				j++;
 			}
-			std::cout << std::endl;
+			//std::cout << std::endl;
 			i++;
 		}
 	}

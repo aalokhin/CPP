@@ -11,7 +11,7 @@ public:
 	~HumanA(void);
 	void					attack(void) const;
 	const std::string		_name;
-	const Weapon&			_weapon;
+	const Weapon 		&	_weapon;
 
 };
 

@@ -75,19 +75,18 @@ int			main(void)
   					phonebook[index].print_one(); //prints one
   				}
   				else
+  				{
   					std::cout << "Incorrect index number!" << std::endl;
-  				continue ;
-				//not sure
+  					continue ;
+  				}
 			}
 			if (contacts_nbr < 8 && command == "ADD")
 			{
-				phonebook[contacts_nbr].add(); //some function that creates a contact
+				phonebook[contacts_nbr].add();
 				contacts_nbr++;
 			}
 
 		}
 
 	}
-	//std::cout << ask_info << std::endl;
-	//std::cout << str_full << std::endl;
 }

@@ -16,14 +16,8 @@ Fixed::~Fixed()
 Fixed::Fixed(Fixed const & copy)
 {
 	std::cout << "Copy constructor called" << std::endl;
-
-	this->_raw = copy.getRawBits(); // Assignation operator line missinmg
-
-
-	//*this = copy; via assignation operator
+	this->_raw = copy.getRawBits();
 }
-
-
 
 
 Fixed & Fixed::operator=(Fixed const& over)
@@ -33,7 +27,6 @@ Fixed & Fixed::operator=(Fixed const& over)
 	if (this != &over)
 	{
 		this->_raw = over.getRawBits();
-
 	}
 	else
 		std::cout << "Self assignment!" << std::endl;

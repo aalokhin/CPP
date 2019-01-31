@@ -1,0 +1,126 @@
+
+#include "mutantstack.hpp"
+
+/*
+ * template<typename ValueType>
+	class Iterator//: public std::deque<T>::iterator  //public std::iterator<std::input_iterator_tag, ValueType>
+    {
+    private:
+        Iterator(ValueType* p) : p_(p) {};
+    public:
+        Iterator() {delete p_; };
+        Iterator(const Iterator &it) : p_(it.p_){};
+        bool operator!=(Iterator const& other) const {return p_ != other.p_; };
+        bool operator==(Iterator const& other) const {return p_ == other.p_; };
+        //typename Iterator::reference operator*() const {return *p_; };
+        Iterator& operator++()
+        {
+            ++p_;
+            return *this;
+        };
+        Iterator& operator--()
+        {
+            --p_;
+            return *this;
+        };
+    private:
+        ValueType* p_;
+    };
+ */
+
+
+
+
+
+
+ /*
+  *
+#ifndef MUTANTSTACK_HPP
+#define MUTANTSTACK_HPP
+
+#include <algorithm>
+#include <stack>
+#include <deque>
+
+
+template<class T>
+class MutantStack : public std::stack<T>
+{
+private:
+    typedef std::stack<T> base_stack;
+
+public:
+	typedef typename std::deque<T>::iterator iterator;
+	/*template<typename ValueType>
+	class Iterator//: public std::deque<T>::iterator  //public std::iterator<std::input_iterator_tag, ValueType>
+    {
+    private:
+        //Iterator(ValueType* p) : p_(p) {};
+    public:
+		Iterator(iterator *head) { this->head = head; }
+		Iterator operator++(int) { Iterator itr = *this; head = head->next; return itr; }
+		T& operator*() { return head->data; }
+		bool operator==(const Iterator &itr) { return head->data == itr.head->data; }
+		bool operator!=(const Iterator &itr) { return head->data != itr.head->data; }
+    private:
+        ValueType* p_;
+    };*/
+
+ /*MutantStack()
+ {
+	 base_stack  copy_stack = static_cast<base_stack>(this->c);//TODO Check
+	 while (!copy_stack.empty())
+	 {
+		 deque_arr.push_front(copy_stack.top());
+		 copy_stack.pop();
+	 }
+
+ };
+virtual ~MutantStack(){
+	//delete deque_arr;
+};
+MutantStack(const MutantStack &other) {
+	this->deque_arr = other.deque_arr;
+};
+MutantStack &operator=(const MutantStack &other)
+{
+	delete this->deque_arr;
+	this->deque_arr = other.deque_arr;
+	return *this;
+};
+
+T& top()
+{
+	return deque_arr.back();
+}
+
+void pop()
+{
+	this->deque_arr.pop_back();
+}
+void push(const T& a)
+{
+	deque_arr.push_back(a);
+}
+
+
+iterator begin() { return deque_arr.begin(); }
+iterator end() { return deque_arr.end(); }
+
+iterator begin() const { return std::begin(deque_arr); }
+iterator end() const { return std::end(deque_arr); }
+
+
+
+
+private:
+std::deque<T>  deque_arr;
+};
+
+//template<class T> MutantStack<T>::iterator : std::list<T> iterator
+
+
+
+#endif
+
+*/

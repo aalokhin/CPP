@@ -19,18 +19,15 @@ ZombieHorde::ZombieHorde(int N)
 	ZombieHorde::_zombie_horde = new Zombie[_N];
 	int i;
 	i = 0;
-
 	while (i < _N)
 	{
 		_zombie_horde[i].type = RandomType();
 		_zombie_horde[i].name = RandomName();
-
-		//std::cout << " 🧟‍♂️ ";
 		i++;
 	}
 	std::cout << std::endl;
 	system("echo \"\033[0m\"");
-
+	
 }
 
 ZombieHorde::~ZombieHorde()
@@ -50,57 +47,36 @@ void			ZombieHorde::announce( void )
 }
 
 
-std::string ZombieHorde::RandomName() //fix the rand non-literal characters
+std::string ZombieHorde::RandomName() 
 {
-	srand(time(0));
-	
-	int max_len = 9;
-	int len = rand() % (max_len - 1);
+	int len = 6;
+	const std::string	alphabet("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz");
 	int i;
+
+	i = 0;
+
 	char r_name[len + 1];
 	r_name[len] = '\0';
-
-	
 	for(i = 0; i < len; i++)
 	{
-		r_name[i] =  (char)((rand() % 52) + 65);
+		r_name[i] =  alphabet[(get_Rand_Int(52))];
 	}
 	std::string rand_res(r_name);
 	return rand_res;
 }
 
-std::string ZombieHorde::RandomType()
+int					ZombieHorde::get_Rand_Int(unsigned int from)
 {
-	srand(time(0));
-	
-	int max_len = 12;
-	int len = rand() % (max_len - 1);
-	int i;
-	char r_name[len + 1];
-	r_name[len] = '\0';
 
-	
-	for(i = 0; i < len; i++)
-	{
-		r_name[i] =  (char)((rand() % 52) + 65);
-	}
-	std::string rand_res(r_name);
-	return rand_res;
+	int	i = (rand() % from);
+
+	return ( (i >= 0) ? i : 0 );
 }
 
-// Zombie* ZombieHorde::randomChump()
-// {
-// 	Zombie *rand_zombie;
 
-// 	system("echo \"\033[1;32m\"");
-
-// 	//std::cout << "ZombieEvent Random Creation called" << std::endl;
-// 	std::string name_r(RandomName());
-// 	std::string type_r(RandomType());
-
-// 	rand_zombie = new Zombie(name_r, type_r);
-// 	//rand_zombie->announce();
-// 	system("echo \"\033[0m\"");
-// 	return rand_zombie;
-
-// }
+std::string 		ZombieHorde::RandomType()
+{
+	const std::string		zombie_types[9] = 
+	{"Stalker", "Spitter", "Ghoul", "Runner", "Romero", "Vodoo", "Lazy", "Crawlers", "Screamer"};
+	return zombie_types[get_Rand_Int(9)];
+}

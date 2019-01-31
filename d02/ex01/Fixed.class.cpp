@@ -31,10 +31,7 @@ Fixed::Fixed(Fixed const & copy)
 {
 	std::cout << "Copy constructor called" << std::endl;
 
-	//this->_raw = copy.getRawBits(); // Assignation operator line missinmg
-
-
-	*this = copy;// via assignation operator
+	*this = copy;
 }
 
 
@@ -58,16 +55,11 @@ Fixed & Fixed::operator=(Fixed const& over)
 
 int Fixed::getRawBits(void) const
 {
-	//std::cout << "getRawBits member function called" << std::endl;
-	
 	return this->_raw;
 }
 
 void     Fixed::setRawBits( int const raw )
 {
-	//std::cout << "this is val_to_convert << _fraction " << raw << std::endl;
-    //std::cout << "setRawBits member function called" << std::endl;
-    
     this->_raw = raw;
 }
 
@@ -86,13 +78,6 @@ int Fixed::toInt(void) const
 
 std::ostream & operator<<(std::ostream & stream, Fixed const & object)
 {
-		// system("echo \"\033[0;31m\"");
-
-	//std::cout << stream << " Here we go how did we even get here " <<  &object << std::endl;
-
-  stream << object.toFloat();
-
-  // std::ostream  <---- The standard objects cout, cerr and clog are objects of this type.
-
-  return stream;
+	stream << object.toFloat();
+	return stream;
 }

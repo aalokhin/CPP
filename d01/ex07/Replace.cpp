@@ -53,17 +53,20 @@ int main (int argc, char **argv)
 	const std::string		Replace_with(argv[3]);
 
 
-
 	std::string line;
 	size_t pos;
 	size_t len = Find_to_Replace.length();
+	int k = 0;
 	while (!input_file.eof())
 	{
+		if (k != 0)
+			output_file << '\n';
 		getline(input_file, line);
 		pos = line.find(Find_to_Replace);
 		if (pos != std::string::npos)
 			line.replace(pos, len, Replace_with);
-		output_file << line << '\n';
+		output_file << line;
+		k++;
 	}
 
 
